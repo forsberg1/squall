@@ -187,7 +187,7 @@ module Squall
     #
     # return bool (true, false)
     def validate_email(email)
-      response = request(:post, "/users/validate_login.json?email=#{email}")
+      response = request(:get, "/users/validate_login.json?email=#{email}")
       response["valid"]
     end
   end
