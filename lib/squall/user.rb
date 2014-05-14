@@ -180,5 +180,15 @@ module Squall
       response = request(:get, "/users/#{id}/limits.json")
       response["limits"]
     end
+
+    # Public: Validate a user by email
+    #
+    # email - Email of user
+    #
+    # return bool (true, false)
+    def validate_email(email)
+      response = request(:post, "/users/validate_login.json?email=#{email}")
+      response["valid"]
+    end
   end
 end
