@@ -41,7 +41,7 @@ module Squall
       check_config
 
       conn = Faraday.new(url: Squall.config[:base_uri]) do |c|
-        c.basic_auth Squall.config[:username], Squall.config[:password]
+        c.basic_auth Squall.config[:email], Squall.config[:password]
         c.params = (options[:query] || {})
         c.request :url_encoded
         c.response :json
