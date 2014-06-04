@@ -42,6 +42,18 @@ module Squall
       @config[:password] = value
     end
 
+
+    # Public: Sets the API username.
+    #
+    # value - The String email
+    #
+    # Returns value.
+    def email(value)
+      @config[:email] = value
+    end
+
+   
+
     # Public: Set to true to enable HTTP logging.
     #
     # value - A Boolean
